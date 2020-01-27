@@ -9,7 +9,7 @@ describe('Input testing', () => {
         const { getByPlaceholderText, getByText } = renderWithRedux(
             <App />
         );
-        fireEvent.change(getByPlaceholderText("placeholder"), {
+        fireEvent.change(getByPlaceholderText("input-text"), {
             target: { value: "new value" }
         });
         fireEvent.click(getByText("Submit todo"));

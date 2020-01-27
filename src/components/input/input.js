@@ -11,7 +11,7 @@ const InputTodo = ({texteInput, buttonLabel}) => {
         if(!input.trim()){
             return
         }else{
-            dispatch(addTodo({id: uuidv4(),input}));
+            dispatch(addTodo({id: uuidv4(),input,completed:false}));
         }
     };
 
@@ -19,7 +19,7 @@ const InputTodo = ({texteInput, buttonLabel}) => {
     <form onSubmit={submitForm}>
       <div>
         <label>{texteInput}</label>
-        <input type="text" name="todo-list" onChange={(e) => setInput(e.target.value)} placeholder="placeholder"/>
+        <input type="text" name="todo-list" onChange={(e) => setInput(e.target.value)} placeholder="input-text"/>
       </div>
       <div>
         <input type="submit" value={buttonLabel} />
