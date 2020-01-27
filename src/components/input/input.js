@@ -1,14 +1,14 @@
 import React from "react";
 
-const InputTodo = ({}) => {
+const InputTodo = ({texteInput, buttonLabel}) => {
   return (
     <form onSubmit={() => console.log("toto")}>
       <div>
-        <label for="name">Add an Item:</label>
+        <label>{texteInput}</label>
         <input type="text" name="todo-list" />
       </div>
       <div>
-        <input type="submit" value="Add Todo" />
+        <input type="submit" value={buttonLabel} />
       </div>
     </form>
   );

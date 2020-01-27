@@ -25,11 +25,13 @@ export const renderWithRedux = (
 
 describe('Input testing', () => {
     test('should render an input with a submit button', () => {
+        const texteInput = "Add an Item:";
+        const buttonLabel = "Add Todo";
         const { getByText } = renderWithRedux(
-            <InputTodo/>
+            <InputTodo buttonLabel={buttonLabel} texteInput={texteInput}/>
         );
-        expect(getByText('Add an Item:')).toBeInTheDocument();
-        expect(getByText('Add Todo')).toBeInTheDocument();
+        expect(getByText(texteInput)).toBeInTheDocument();
+        expect(getByText(buttonLabel)).toBeInTheDocument();
     });
 
 });
