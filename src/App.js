@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Provider store={store}>
-          <InputTodo />
+          <InputTodo buttonLabel="Submit todo" texteInput="Add an Item : "/>
         </Provider>
       </header>
     </div>
