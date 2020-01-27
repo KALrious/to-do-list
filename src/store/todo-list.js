@@ -1,7 +1,7 @@
 import {createActions, handleActions} from "redux-actions";
 
 export const { addTodo } = createActions("ADD_TODO");
-export const defaultState = {};
+export const defaultState = {todos: []};
 
 export const todoList = handleActions(
   {

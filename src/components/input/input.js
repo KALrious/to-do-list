@@ -19,7 +19,7 @@ const InputTodo = ({texteInput, buttonLabel}) => {
     <form onSubmit={submitForm}>
       <div>
         <label>{texteInput}</label>
-        <input type="text" name="todo-list" onChange={(e) => setInput(e.target.value)}/>
+        <input type="text" name="todo-list" onChange={(e) => setInput(e.target.value)} placeholder="placeholder"/>
       </div>
       <div>
         <input type="submit" value={buttonLabel} />
