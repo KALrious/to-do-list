@@ -1,23 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import {createStore} from "redux";
+import {Provider} from "react-redux";
+import {todoList} from "./store/todo-list";
+import InputTodo from "./components/input";
+import TodoList from "./containers/todo-list/todo-list";
+import SortByNotCompleted from "./containers/sort-by-not-completed";
+
+const store = createStore(todoList);
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Provider store={store}>
+          <InputTodo buttonLabel="Submit todo" texteInput="Add an Item : "/>
+          <TodoList/>
+          <SortByNotCompleted/>
+        </Provider>
       </header>
     </div>
   );
