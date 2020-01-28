@@ -17,7 +17,7 @@ const SortByNotCompleted = ({}) => {
         }
     },[todos]);
     return(
-        <Button onClick={clickNotCOmpleted} active={disable}>
+        <Button onClick={clickNotCOmpleted} active={disable} color="Chocolate">
             <label>
                 sort by not completed
             </label>
