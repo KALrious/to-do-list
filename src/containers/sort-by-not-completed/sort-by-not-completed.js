@@ -9,6 +9,7 @@ const SortByNotCompleted = ({}) => {
     const todos = useSelector(selectTodos);
     const dispatch = useDispatch();
     const clickNotCOmpleted = () => {
+        //service
         dispatch(sortByNotCompleted());
     };
     useEffect(() => {

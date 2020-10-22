@@ -13,6 +13,7 @@ const TodoList = ({}) => {
   const dispatch = useDispatch();
   const changeList = (id) => {
     if(id){
+      //service
       dispatch(completedTodo({id}))
     }
   };

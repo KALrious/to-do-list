@@ -33,5 +33,4 @@ describe('Input testing', () => {
         expect(getByText(texteInput)).toBeInTheDocument();
         expect(getByText(buttonLabel)).toBeInTheDocument();
     });
-
 });
