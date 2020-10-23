@@ -30,7 +30,6 @@ export const todoList = handleActions(
             }else{
                 return -1
             }
-            return 0;
         });
         return {todos, sorted:true};
       }

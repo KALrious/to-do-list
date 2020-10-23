@@ -4,7 +4,7 @@ import Todo from "../../components/todo";
 import {completedTodo} from "../../store/todo-list";
 
 
-const TodoList = ({}) => {
+const TodoList = () => {
   const selectTodos = state => state.todos;
   const selectSorted = state => state.sorted;
   const todos = useSelector(selectTodos);
